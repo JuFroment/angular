@@ -1,3 +1,13 @@
 <router-outlet></router-outlet>
 
-<app-who-am-i></app-who-am-i>
+<!-- <app-who-am-i firstname="Jean" lastname="Naymar"> </app-who-am-i>
+<br /> -->
+<app-who-am-i
+  [firstname]="firstnameToInput"
+  [lastname]="lastnameToInput"
+  (onClickedShowAge)="onClickShowAge()"
+>
+</app-who-am-i>
+<!-- <br />
+<app-who-am-i></app-who-am-i> -->
+<!-- <app-tempo></app-tempo> -->

@@ -11,5 +11,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'hello-world';
+  firstnameToInput: string;
+  lastnameToInput: string;
+  age: number;
+
+  constructor() {
+    this.firstnameToInput = 'Jessica';
+    this.lastnameToInput = 'Rottedanslefrigo';
+    this.age = 45;
+}
+
+onClickShowAge() {
+  alert(this.age);
+}
+
 }
