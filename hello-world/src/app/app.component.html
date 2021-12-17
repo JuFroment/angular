@@ -1,13 +1,27 @@
 <router-outlet></router-outlet>
 
-<!-- <app-who-am-i firstname="Jean" lastname="Naymar"> </app-who-am-i>
-<br /> -->
-<app-who-am-i
-  [firstname]="firstnameToInput"
-  [lastname]="lastnameToInput"
-  (onClickedShowAge)="onClickShowAge()"
+<app-square-with-arrows></app-square-with-arrows>
+
+<!-- <app-who-am-i
+  *ngFor="let user of users; index as i"
+  [ngStyle]="generateStyles(i)"
+  [firstname]="user.firstname"
+  [lastname]="user.lastname"
+  (onClickedShowAge)="onClickShowAge(user.age)"
 >
 </app-who-am-i>
-<!-- <br />
-<app-who-am-i></app-who-am-i> -->
+
+<br />
+<br />
+
+<button
+  [ngClass]="{
+    ju: users[0].firstname === 'Julien',
+    pasJu: users[0].firstname !== 'Julien'
+  }"
+  (click)="onClickAddNewUser()"
+>
+  Ajouter un utilisateur
+</button> -->
+
 <!-- <app-tempo></app-tempo> -->

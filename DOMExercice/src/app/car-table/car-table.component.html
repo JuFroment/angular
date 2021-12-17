@@ -1,0 +1,19 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Marque</th>
+      <th scope="col">Modèle</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      app-car-line
+      *ngFor="let car of cars"
+      [id]="car.id"
+      [marque]="car.marque"
+      [modele]="car.modele"
+    ></tr>
+  </tbody>
+</table>

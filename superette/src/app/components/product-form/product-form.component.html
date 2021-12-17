@@ -1,0 +1,28 @@
+<form [formGroup]="form" (ngSubmit)="onSubmitProductForm()">
+  <div class="form-group">
+    <label for="name">Nom du Produit</label>
+    <input
+      id="name"
+      class="form-control"
+      formControlName="name"
+      [(ngModel)]="product.name"
+    />
+  </div>
+
+  <div class="form-check">
+    <label class="form-check-label" for="status">Dispo. du produit</label>
+    <input
+      type="checkbox"
+      id="status"
+      class="form-check-input"
+      formControlName="status"
+      [(ngModel)]="product.status"
+    />
+  </div>
+
+  <div class="row col-4 mx-auto">
+    <button type="submit" class="btn btn-dark btn-lg" [disabled]="form.invalid">
+      {{ buttonLabel }}
+    </button>
+  </div>
+</form>

@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Username</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      app-line
+      *ngFor="let user of users"
+      [id]="user.id"
+      [username]="user.username"
+      [email]="user.email"
+    ></tr>
+  </tbody>
+</table>

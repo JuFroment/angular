@@ -1,0 +1,55 @@
+<div class="d-flex justify-content-center my-4">
+  <button
+    (click)="onClickUpdateAllStatus(true)"
+    class="btn btn-outline-dark mx-2"
+  >
+    Tout dispo
+  </button>
+  <button
+    (click)="onClickUpdateAllStatus(false)"
+    class="btn btn-outline-dark mx-2"
+  >
+    Aucun de dispo
+  </button>
+</div>
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products; index as i">
+      <th scope="row">{{ product.id }}</th>
+      <td>{{ product.name }}</td>
+      <td>{{ product.status ? "Dispo" : "Pas Dispo" }}</td>
+      <td>
+        <button (click)="onClickUpdateStatus(i)" class="btn btn-outline-dark">
+          Switch en {{ product.status ? "Pas Dispo" : "Dispo" }}
+        </button>
+      </td>
+      <td>
+        <button
+          [routerLink]="['/products', product.id]"
+          class="btn btn-outline-dark mx-2"
+        >
+          Détails
+        </button>
+        <button
+          [routerLink]="['/products/', 'edit', product.id]"
+          class="btn btn-outline-warning mx-2"
+        >
+          Editer
+        </button>
+        <button
+          (click)="onClickDeleteProduct(i)"
+          class="btn btn-outline-danger mx-2"
+        >
+          Supprimer
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

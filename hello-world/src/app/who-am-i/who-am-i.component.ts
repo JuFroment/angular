@@ -42,4 +42,7 @@ export class WhoAmIComponent implements OnInit {
   onClickShowAge(): void {
     this.onClickedShowAge.emit();
   }
-}
+
+
+  }
+
